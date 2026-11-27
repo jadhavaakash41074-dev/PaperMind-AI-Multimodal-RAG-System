@@ -1,0 +1,10 @@
+.env
+secrets.toml
+.streamlit/
+*.ipynb
+models/
+chroma_db/
+data/
+__pycache__/
+anaconda_projects/
+.virtual_documents/
