@@ -6,12 +6,14 @@ from rank_bm25 import BM25Okapi
 from sentence_transformers import SentenceTransformer , CrossEncoder
 import chromadb
 from groq import Groq
+import os
 
 print("Loading RAG models... plz wait for some time")
 model = SentenceTransformer("all-MiniLM-L6-v2", device = "cpu")
 client = chromadb.PersistentClient(path = "./chroma_db")
 collection = client.get_or_create_collection(name ="paper_30")
-groq_client = Groq(api_key ="GROQ_API_KEY")
+
+groq_client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 reranker = CrossEncoder("cross-encoder/ms-marco-MiniLM-L-6-v2", device="cpu")
 print("RAG is Loaded")
 
