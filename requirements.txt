@@ -1,0 +1,15 @@
+```txt
+streamlit
+fastapi
+uvicorn
+chromadb
+sentence-transformers
+transformers
+torch
+groq
+Pillow
+python-dotenv
+PyMuPDF
+pypdf
+numpy
+```
